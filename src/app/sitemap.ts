@@ -1,6 +1,8 @@
 import type { MetadataRoute } from 'next';
 import { STATES, CITIES_MATRIX } from '@/data/geo';
 
+export const dynamic = 'force-static';
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://foundersgrant.org';
   const buildDate = new Date('2026-11-04T00:00:00.000Z');
