@@ -9,6 +9,10 @@ export interface StateData {
   awardedGrantsCount: number;
   description: string;
   highlightCities: string[];
+  wikidataId?: string;
+  wikipediaUrl?: string;
+  latitude?: number;
+  longitude?: number;
 }
 
 export interface CityData {
@@ -25,6 +29,10 @@ export interface CityData {
   awardedGrantsCount: number;
   activeCycle: string;
   deadline: string;
+  wikidataId?: string;
+  wikipediaUrl?: string;
+  latitude?: number;
+  longitude?: number;
 }
 
 export const STATES: StateData[] = [
@@ -38,7 +46,11 @@ export const STATES: StateData[] = [
     deadline: 'December 15, 2026',
     awardedGrantsCount: 7,
     description: 'Founders Grant headquarters chapter. Prioritizing Front Range trades, independent craftspeople, outdoor innovators, and community ventures across Colorado.',
-    highlightCities: ['Denver', 'Boulder', 'Colorado Springs', 'Fort Collins', 'Aurora', 'Lakewood', 'Littleton', 'Arvada']
+    highlightCities: ['Denver', 'Boulder', 'Colorado Springs', 'Fort Collins', 'Aurora', 'Lakewood', 'Littleton', 'Arvada'],
+    wikidataId: 'Q1261',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Colorado',
+    latitude: 39.5501,
+    longitude: -105.7821
   },
   {
     slug: 'texas',
@@ -50,7 +62,11 @@ export const STATES: StateData[] = [
     deadline: 'December 15, 2026',
     awardedGrantsCount: 6,
     description: 'Empowering bootstrapped founders, trade service providers, and local innovators across the Lone Star State with modern digital infrastructure.',
-    highlightCities: ['Austin', 'Dallas', 'Houston', 'San Antonio', 'Fort Worth']
+    highlightCities: ['Austin', 'Dallas', 'Houston', 'San Antonio', 'Fort Worth'],
+    wikidataId: 'Q1439',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Texas',
+    latitude: 31.9686,
+    longitude: -99.9018
   },
   {
     slug: 'california',
@@ -62,7 +78,11 @@ export const STATES: StateData[] = [
     deadline: 'December 15, 2026',
     awardedGrantsCount: 8,
     description: 'Supporting Main Street businesses, boutique studios, wellness innovators, and grassroots creators throughout California.',
-    highlightCities: ['Los Angeles', 'San Diego', 'San Francisco', 'San Jose', 'Sacramento']
+    highlightCities: ['Los Angeles', 'San Diego', 'San Francisco', 'San Jose', 'Sacramento'],
+    wikidataId: 'Q99',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/California',
+    latitude: 36.7783,
+    longitude: -119.4179
   },
   {
     slug: 'florida',
@@ -74,7 +94,11 @@ export const STATES: StateData[] = [
     deadline: 'December 15, 2026',
     awardedGrantsCount: 5,
     description: 'Awarding bilingual web portals, event directories, and automated operations engines to independent business owners across Florida.',
-    highlightCities: ['Miami', 'Orlando', 'Tampa', 'Jacksonville', 'Fort Lauderdale']
+    highlightCities: ['Miami', 'Orlando', 'Tampa', 'Jacksonville', 'Fort Lauderdale'],
+    wikidataId: 'Q812',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Florida',
+    latitude: 27.6648,
+    longitude: -81.5158
   },
   {
     slug: 'new-york',
@@ -86,7 +110,11 @@ export const STATES: StateData[] = [
     deadline: 'December 15, 2026',
     awardedGrantsCount: 7,
     description: 'Helping neighborhood businesses, creative agencies, and non-profit innovators in New York compete with enterprise conglomerates.',
-    highlightCities: ['New York City', 'Brooklyn', 'Queens', 'Buffalo', 'Rochester']
+    highlightCities: ['New York City', 'Brooklyn', 'Queens', 'Buffalo', 'Rochester'],
+    wikidataId: 'Q1384',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/New_York_(state)',
+    latitude: 40.7128,
+    longitude: -74.006
   },
   {
     slug: 'illinois',
@@ -98,7 +126,11 @@ export const STATES: StateData[] = [
     deadline: 'December 15, 2026',
     awardedGrantsCount: 5,
     description: 'Delivering full-stack software and lead automations to family-owned trades, retail, and community startups across Cook County and Illinois.',
-    highlightCities: ['Chicago', 'Naperville', 'Rockford', 'Aurora', 'Evanston']
+    highlightCities: ['Chicago', 'Naperville', 'Rockford', 'Aurora', 'Evanston'],
+    wikidataId: 'Q1204',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Illinois',
+    latitude: 40.6331,
+    longitude: -89.3985
   },
   {
     slug: 'georgia',
@@ -110,7 +142,11 @@ export const STATES: StateData[] = [
     deadline: 'December 15, 2026',
     awardedGrantsCount: 4,
     description: 'Supporting trade contractors, local logistics, and emerging startups across the greater Atlanta metro area and Georgia.',
-    highlightCities: ['Atlanta', 'Savannah', 'Augusta', 'Alpharetta', 'Marietta']
+    highlightCities: ['Atlanta', 'Savannah', 'Augusta', 'Alpharetta', 'Marietta'],
+    wikidataId: 'Q1428',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Georgia_(U.S._state)',
+    latitude: 32.1656,
+    longitude: -82.9001
   },
   {
     slug: 'washington',
@@ -122,7 +158,11 @@ export const STATES: StateData[] = [
     deadline: 'December 15, 2026',
     awardedGrantsCount: 3,
     description: 'Bridging the engineering divide for Pacific Northwest creators, local shops, and non-profit organizations in Washington State.',
-    highlightCities: ['Seattle', 'Bellevue', 'Tacoma', 'Spokane', 'Vancouver']
+    highlightCities: ['Seattle', 'Bellevue', 'Tacoma', 'Spokane', 'Vancouver'],
+    wikidataId: 'Q1223',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Washington_(state)',
+    latitude: 47.7511,
+    longitude: -120.7401
   },
   {
     slug: 'arizona',
@@ -134,7 +174,11 @@ export const STATES: StateData[] = [
     deadline: 'December 15, 2026',
     awardedGrantsCount: 3,
     description: 'Modernizing Valley of the Sun trade services, solar consultants, and early ventures with high-converting web engines.',
-    highlightCities: ['Phoenix', 'Scottsdale', 'Tucson', 'Mesa', 'Chandler']
+    highlightCities: ['Phoenix', 'Scottsdale', 'Tucson', 'Mesa', 'Chandler'],
+    wikidataId: 'Q816',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Arizona',
+    latitude: 34.0489,
+    longitude: -111.0937
   },
   {
     slug: 'tennessee',
@@ -146,7 +190,11 @@ export const STATES: StateData[] = [
     deadline: 'December 15, 2026',
     awardedGrantsCount: 3,
     description: 'Fueling independent artisans, hospitality brands, musicians, and local trades across Middle and East Tennessee.',
-    highlightCities: ['Nashville', 'Memphis', 'Knoxville', 'Chattanooga', 'Franklin']
+    highlightCities: ['Nashville', 'Memphis', 'Knoxville', 'Chattanooga', 'Franklin'],
+    wikidataId: 'Q1509',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Tennessee',
+    latitude: 35.5175,
+    longitude: -86.5804
   },
   {
     slug: 'north-carolina',
@@ -158,7 +206,11 @@ export const STATES: StateData[] = [
     deadline: 'December 15, 2026',
     awardedGrantsCount: 4,
     description: 'Equipping Research Triangle and Charlotte small business founders with high-speed web apps and local Google Map domination.',
-    highlightCities: ['Charlotte', 'Raleigh', 'Durham', 'Greensboro', 'Asheville']
+    highlightCities: ['Charlotte', 'Raleigh', 'Durham', 'Greensboro', 'Asheville'],
+    wikidataId: 'Q1454',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/North_Carolina',
+    latitude: 35.7596,
+    longitude: -79.0193
   },
   {
     slug: 'massachusetts',
@@ -170,7 +222,11 @@ export const STATES: StateData[] = [
     deadline: 'December 15, 2026',
     awardedGrantsCount: 3,
     description: 'Providing elite full-stack engineering and search infrastructure grants to early Boston ventures with big community missions.',
-    highlightCities: ['Boston', 'Cambridge', 'Worcester', 'Springfield', 'Somerville']
+    highlightCities: ['Boston', 'Cambridge', 'Worcester', 'Springfield', 'Somerville'],
+    wikidataId: 'Q771',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Massachusetts',
+    latitude: 42.4072,
+    longitude: -71.3824
   }
 ];
 
@@ -189,7 +245,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Custom Trades & Remodeling', 'Outdoor Lifestyle Brands', 'Specialty Craft Breweries & Food'],
     awardedGrantsCount: 4,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q1655',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Denver',
+    latitude: 39.7392,
+    longitude: -104.9903
   },
   {
     stateSlug: 'colorado',
@@ -204,7 +264,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Holistic Health & Wellness', 'CleanTech & Sustainability', 'Specialty Consumer Goods'],
     awardedGrantsCount: 2,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q486981',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Boulder,_Colorado',
+    latitude: 40.015,
+    longitude: -105.2705
   },
   {
     stateSlug: 'colorado',
@@ -219,7 +283,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Residential Contracting', 'Veteran-Owned Ventures', 'Automotive & Fleet Services'],
     awardedGrantsCount: 2,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q165487',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Colorado_Springs,_Colorado',
+    latitude: 38.8339,
+    longitude: -104.8214
   },
   {
     stateSlug: 'colorado',
@@ -234,7 +302,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Craft Breweries', 'Agricultural Innovation', 'Independent Retail & Apparel'],
     awardedGrantsCount: 1,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q333333',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Fort_Collins,_Colorado',
+    latitude: 40.5853,
+    longitude: -105.0844
   },
   {
     stateSlug: 'colorado',
@@ -249,7 +321,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['International Cuisine', 'Auto Repair & Trades', 'Healthcare & Home Aid'],
     awardedGrantsCount: 2,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q488667',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Aurora,_Colorado',
+    latitude: 39.7294,
+    longitude: -104.8319
   },
   {
     stateSlug: 'colorado',
@@ -264,7 +340,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Physical Therapy & Clinics', 'Home Plumbing & HVAC', 'Professional Consulting'],
     awardedGrantsCount: 1,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q854067',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Lakewood,_Colorado',
+    latitude: 39.7047,
+    longitude: -105.0814
   },
 
   // ================= TEXAS CHAPTER =================
@@ -281,7 +361,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Bootstrapped Tech', 'Live Events & Music', 'Specialty Consumer Brands'],
     awardedGrantsCount: 3,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q16559',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Austin,_Texas',
+    latitude: 30.2672,
+    longitude: -97.7431
   },
   {
     stateSlug: 'texas',
@@ -296,7 +380,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Commercial Contracting', 'Logistics & Warehousing', 'Professional Services'],
     awardedGrantsCount: 3,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q16557',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Dallas',
+    latitude: 32.7767,
+    longitude: -96.797
   },
   {
     stateSlug: 'texas',
@@ -311,7 +399,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Energy Services', 'Medical & Healthcare Clinics', 'Industrial Equipment'],
     awardedGrantsCount: 2,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q16555',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Houston',
+    latitude: 29.7604,
+    longitude: -95.3698
   },
 
   // ================= CALIFORNIA CHAPTER =================
@@ -328,7 +420,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Creative Studios', 'Wellness & Holistic Medicine', 'Apparel & Design'],
     awardedGrantsCount: 4,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q65',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Los_Angeles',
+    latitude: 34.0522,
+    longitude: -118.2437
   },
   {
     stateSlug: 'california',
@@ -343,7 +439,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Fitness & Outdoor Clubs', 'Marine & Eco-Tourism', 'Biotech Micro-Consulting'],
     awardedGrantsCount: 2,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q16552',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/San_Diego',
+    latitude: 32.7157,
+    longitude: -117.1611
   },
   {
     stateSlug: 'california',
@@ -358,7 +458,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Civic Technology', 'Community Non-Profits', 'Artisan Coffee & Food'],
     awardedGrantsCount: 2,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q62',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/San_Francisco',
+    latitude: 37.7749,
+    longitude: -122.4194
   },
 
   // ================= FLORIDA CHAPTER =================
@@ -375,7 +479,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Hospitality & Nightlife', 'Latin Dance & Fitness', 'Real Estate Micro-Agencies'],
     awardedGrantsCount: 3,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q8652',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Miami',
+    latitude: 25.7617,
+    longitude: -80.1918
   },
   {
     stateSlug: 'florida',
@@ -390,7 +498,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Family Entertainment', 'Trade Services & Roofing', 'Culinary & Catering'],
     awardedGrantsCount: 2,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q49233',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Orlando,_Florida',
+    latitude: 28.5383,
+    longitude: -81.3792
   },
 
   // ================= NEW YORK CHAPTER =================
@@ -407,7 +519,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Independent Retail & Fashion', 'Culinary & Specialty Dining', 'Professional Services'],
     awardedGrantsCount: 4,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q60',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/New_York_City',
+    latitude: 40.7128,
+    longitude: -74.006
   },
   {
     stateSlug: 'new-york',
@@ -422,7 +538,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Artisan Woodcraft & Ceramics', 'Film & Photography Studios', 'Local Community Centers'],
     awardedGrantsCount: 3,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q18419',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Brooklyn',
+    latitude: 40.6782,
+    longitude: -73.9442
   },
 
   // ================= ILLINOIS CHAPTER =================
@@ -439,7 +559,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Industrial Trades & HVAC', 'Community Non-Profits', 'Independent Hospitality'],
     awardedGrantsCount: 5,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q1297',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Chicago',
+    latitude: 41.8781,
+    longitude: -87.6298
   },
 
   // ================= GEORGIA CHAPTER =================
@@ -456,7 +580,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Commercial Contracting', 'Creative Film & Audio', 'Local Logistics'],
     awardedGrantsCount: 4,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q23556',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Atlanta',
+    latitude: 33.749,
+    longitude: -84.388
   },
 
   // ================= WASHINGTON CHAPTER =================
@@ -473,7 +601,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Coffee Roasters & Specialty Food', 'Outdoor Recreation', 'Custom Software Micro-Consulting'],
     awardedGrantsCount: 3,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q5083',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Seattle',
+    latitude: 47.6062,
+    longitude: -122.3321
   },
 
   // ================= ARIZONA CHAPTER =================
@@ -490,7 +622,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['HVAC & Solar Contractors', 'Pool Maintenance & Trades', 'Real Estate Services'],
     awardedGrantsCount: 3,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q16556',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Phoenix,_Arizona',
+    latitude: 33.4484,
+    longitude: -112.074
   },
 
   // ================= TENNESSEE CHAPTER =================
@@ -507,7 +643,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Music & Production Studios', 'Hospitality & Dining', 'Construction & Trades'],
     awardedGrantsCount: 3,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q23197',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Nashville,_Tennessee',
+    latitude: 36.1627,
+    longitude: -86.7816
   },
 
   // ================= NORTH CAROLINA CHAPTER =================
@@ -524,7 +664,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['Financial Micro-Advisors', 'Residential Home Services', 'Logistics'],
     awardedGrantsCount: 2,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q16565',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Charlotte,_North_Carolina',
+    latitude: 35.2271,
+    longitude: -80.8431
   },
 
   // ================= MASSACHUSETTS CHAPTER =================
@@ -541,7 +685,11 @@ export const CITIES_MATRIX: CityData[] = [
     keyIndustries: ['EdTech & Academic Spinoffs', 'Specialty Seafood & Dining', 'Professional Services'],
     awardedGrantsCount: 3,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',
-    deadline: 'December 15, 2026'
+    deadline: 'December 15, 2026',
+    wikidataId: 'Q100',
+    wikipediaUrl: 'https://en.wikipedia.org/wiki/Boston',
+    latitude: 42.3601,
+    longitude: -71.0589
   }
 ];
 

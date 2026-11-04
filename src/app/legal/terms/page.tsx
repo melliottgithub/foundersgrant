@@ -111,16 +111,13 @@ export default function TermsPage() {
 
           <section id="ip">
             <h2 style={{ color: 'var(--apple-text-primary)', fontSize: '1.35rem', marginBottom: '0.75rem', fontWeight: '700' }}>
-              4. Intellectual Property &amp; Founder Data Sovereignty
+              4. Fair Ownership &amp; Transparency (What’s Yours Is Yours, What’s Ours Is Ours)
             </h2>
             <p>
-              <strong style={{ color: 'var(--apple-text-primary)' }}>Their Data Is Their Data (100% Founder Data Sovereignty):</strong> The grant recipient retains 100% exclusive, unencumbered ownership of all customer databases, leads, prospect records, domain names, content, trademarks, and business assets. DevMellio LLC makes zero claim of ownership to recipient customer data or business relationships.
+              <strong style={{ color: 'var(--apple-text-primary)' }}>Your Business, Domain &amp; Customer Data:</strong> Your domain is your domain. Your business is your business. Your customer lists, inbound phone leads, website content, and brand assets belong 100% to you. We never hold your domain hostage, lock you into hidden maintenance contracts, or hide things behind proprietary paywalls. You are free to run and grow your business with full autonomy.
             </p>
             <p style={{ marginTop: '0.5rem' }}>
-              <strong style={{ color: 'var(--apple-text-primary)' }}>DevMellio Code &amp; Software IP:</strong> All underlying source code, platform architectures, engineering frameworks, algorithms, and technical automation workflows engineered by DevMellio LLC remain the exclusive intellectual property of DevMellio LLC. 
-            </p>
-            <p style={{ marginTop: '0.5rem' }}>
-              <strong style={{ color: 'var(--apple-text-primary)' }}>Turnkey Operational License:</strong> In lieu of monetary compensation, DevMellio LLC awards the recipient a fully configured, live production software deployment and an irrevocable, royalty-free operational license to run the software for their venture with zero software licensing fees.
+              <strong style={{ color: 'var(--apple-text-primary)' }}>Our Free Time &amp; Portfolio Credit:</strong> Michael and DevMellio LLC contribute senior software engineering time 100% pro bono ($0 cost). In return, we ask only for normal, fair trade: (1) an authentic 2-minute video review once your build is live, and (2) permission to feature your verified growth in our portfolio. Our underlying developer boilerplates and agency tools remain ours, while you get a fully working, production-grade platform on your domain with zero ongoing software fees.
             </p>
           </section>
 

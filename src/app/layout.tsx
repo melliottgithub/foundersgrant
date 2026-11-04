@@ -85,6 +85,21 @@ export default function RootLayout({
             addressCountry: 'US',
           },
         },
+        founder: {
+          '@type': 'Person',
+          name: 'Michael Elliott',
+          jobTitle: 'Lead Software Architect',
+          worksFor: {
+            '@type': 'Organization',
+            name: 'DevMellio LLC',
+            url: 'https://devmellio.com',
+          },
+        },
+        sameAs: [
+          'https://devmellio.com',
+          'https://www.wikidata.org/wiki/Q1052604',
+          'https://www.wikidata.org/wiki/Q483854',
+        ],
         parentOrganization: {
           '@type': 'Organization',
           name: 'DevMellio LLC',
@@ -100,6 +115,10 @@ export default function RootLayout({
           'In-kind software engineering and digital infrastructure grants awarded to small businesses and founders.',
         publisher: {
           '@id': 'https://foundersgrant.org/#organization',
+        },
+        speakable: {
+          '@type': 'SpeakableSpecification',
+          cssSelector: ['.geo-benchmark-stat', '.section-desc', '.faq-answer'],
         },
       },
       {

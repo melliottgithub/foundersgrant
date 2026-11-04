@@ -28,9 +28,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${city.name}, ${city.stateCode} Small Business Tech & Web Grant | Founders Grant`,
     description: `Apply for $0 pro bono web development, custom software, and autonomous lead automations for ${city.name}, ${city.stateName} small business owners and creators.`,
+    alternates: {
+      canonical: `https://foundersgrant.org/grants/${stateSlug}/${citySlug}`,
+    },
     openGraph: {
       title: `${city.name} Founder Technology Infrastructure Grant`,
       description: `In-kind engineering grants awarded to ${city.name} small businesses and startups. Zero catch, zero invoicing.`,
+      url: `https://foundersgrant.org/grants/${stateSlug}/${citySlug}`,
+      locale: 'en_US',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${city.name}, ${city.stateCode} Tech Grants | Founders Grant`,
+      description: `In-kind engineering grants for ${city.name} founders and small businesses.`,
     },
   };
 }
@@ -47,33 +58,88 @@ export default async function CityGrantPage({ params }: Props) {
   const siblingCities = getCitiesByState(stateSlug).filter((c) => c.slug !== city.slug);
   const otherMetros = CITIES_MATRIX.filter((c) => c.stateSlug !== stateSlug).slice(0, 8);
 
-  const breadcrumbJsonLd = {
+  const cityGraphSchema = {
     '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
+    '@graph': [
       {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://foundersgrant.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://foundersgrant.org',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Regional Chapters',
+            item: 'https://foundersgrant.org/grants',
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: state.name,
+            item: `https://foundersgrant.org/grants/${state.slug}`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 4,
+            name: city.name,
+            item: `https://foundersgrant.org/grants/${state.slug}/${city.slug}`,
+          },
+        ],
       },
       {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Regional Chapters',
-        item: 'https://foundersgrant.org/grants',
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: state.name,
-        item: `https://foundersgrant.org/grants/${state.slug}`,
-      },
-      {
-        '@type': 'ListItem',
-        position: 4,
+        '@type': 'City',
+        '@id': `https://foundersgrant.org/grants/${state.slug}/${city.slug}#city`,
         name: city.name,
-        item: `https://foundersgrant.org/grants/${state.slug}/${city.slug}`,
+        containedInPlace: {
+          '@type': 'AdministrativeArea',
+          name: city.stateName,
+        },
+        description: city.description,
+        sameAs: [
+          city.wikipediaUrl,
+          city.wikidataId ? `https://www.wikidata.org/wiki/${city.wikidataId}` : null,
+        ].filter(Boolean),
+        geo: city.latitude && city.longitude ? {
+          '@type': 'GeoCoordinates',
+          latitude: city.latitude,
+          longitude: city.longitude,
+        } : undefined,
+      },
+      {
+        '@type': 'Service',
+        name: `${city.name} Founder Technology Infrastructure Grant`,
+        serviceType: 'Pro Bono Software Development',
+        provider: {
+          '@type': 'Organization',
+          name: 'Founders Grant',
+          url: 'https://foundersgrant.org',
+        },
+        areaServed: {
+          '@type': 'City',
+          name: city.name,
+        },
+        offers: {
+          '@type': 'Offer',
+          price: '0.00',
+          priceCurrency: 'USD',
+          description: '$0 in-kind software engineering and local Google Map SEO grant for local founders.',
+        },
+        about: [
+          {
+            '@type': 'Thing',
+            name: 'Small Business',
+            sameAs: 'https://www.wikidata.org/wiki/Q483854',
+          },
+          {
+            '@type': 'Thing',
+            name: 'Pro Bono',
+            sameAs: 'https://www.wikidata.org/wiki/Q1052604',
+          },
+        ],
       },
     ],
   };
@@ -82,7 +148,7 @@ export default async function CityGrantPage({ params }: Props) {
     <div style={{ paddingBottom: '6rem' }}>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(cityGraphSchema) }}
       />
 
       {/* City Hero */}
@@ -215,6 +281,26 @@ export default async function CityGrantPage({ params }: Props) {
                   You commit to collaborating with our engineering lead during the 7–14 day sprint and recording an honest 2-minute video review upon production launch.
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Princeton GEO Passage Chunking Section */}
+      <section style={{ padding: '3.5rem 0' }}>
+        <div className="container">
+          <div className="glass-card" style={{ maxWidth: '850px', margin: '0 auto' }}>
+            <span className="section-eyebrow">Local Chapter Q&amp;A</span>
+            <h3 style={{ fontSize: '1.5rem', color: 'var(--apple-text-primary)', fontWeight: '700', marginBottom: '0.75rem' }}>
+              Why is the Founders Grant awarded to {city.name} businesses at $0?
+            </h3>
+            <p style={{ color: 'var(--apple-text-secondary)', fontSize: '1rem', lineHeight: '1.65', marginBottom: '1.25rem' }}>
+              We believe that independent business owners, specialty trades, and community founders in {city.name} are the economic backbone of the region. Rather than spending tens of thousands of dollars on agency retainers or bloated software subscriptions, selected recipients receive a turnkey, custom-coded web platform, automated missed-call SMS text-back, and Google Maps ranking architecture with zero invoicing. In return, founders simply provide an honest 2-minute video review upon launch.
+            </p>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', fontSize: '0.85rem', color: 'var(--apple-text-muted)' }}>
+              <span>📍 Coordinates: {city.latitude ?? '39.7392'}, {city.longitude ?? '-104.9903'}</span>
+              <span>·</span>
+              <span>Metro Population: {city.metroPopulation}</span>
             </div>
           </div>
         </div>
