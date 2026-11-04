@@ -59,11 +59,11 @@ export default function TermsPage() {
 
           <section>
             <h2 style={{ color: '#fff', fontSize: '1.3rem', marginBottom: '0.75rem' }}>
-              3. "AS-IS" Software Warranty Disclaimer
+              3. &ldquo;AS-IS&rdquo; Software Warranty Disclaimer
             </h2>
             <p>
               All software, websites, scripts, APIs, webhooks, and database configurations delivered under the Founders Grant 
-              program are provided strictly <strong>"AS-IS"</strong> and <strong>"AS-AVAILABLE"</strong> without warranty of any kind, 
+              program are provided strictly <strong>&ldquo;AS-IS&rdquo;</strong> and <strong>&ldquo;AS-AVAILABLE&rdquo;</strong> without warranty of any kind, 
               express or implied. 
             </p>
             <p style={{ marginTop: '0.5rem' }}>

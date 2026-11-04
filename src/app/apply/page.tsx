@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, Suspense } from 'react';
+import { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { GRANT_PACKAGES } from '@/data/packages';
@@ -11,13 +11,17 @@ function ApplicationFormContent() {
   const initialCity = searchParams.get('city') || '';
   const initialPackage = searchParams.get('package') || '';
 
+  const matchedCity = initialCity
+    ? CITIES.find((c) => c.name.toLowerCase() === initialCity.toLowerCase())
+    : null;
+
   const [formData, setFormData] = useState({
     fullName: '',
     businessName: '',
     email: '',
     phone: '',
-    city: initialCity,
-    state: '',
+    city: matchedCity ? matchedCity.name : initialCity,
+    state: matchedCity ? matchedCity.stateCode : '',
     website: '',
     desiredPackage: initialPackage,
     founderStory: '',
@@ -28,15 +32,6 @@ function ApplicationFormContent() {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-
-  useEffect(() => {
-    if (initialCity) {
-      const match = CITIES.find((c) => c.name.toLowerCase() === initialCity.toLowerCase());
-      if (match) {
-        setFormData((prev) => ({ ...prev, city: match.name, state: match.stateCode }));
-      }
-    }
-  }, [initialCity]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

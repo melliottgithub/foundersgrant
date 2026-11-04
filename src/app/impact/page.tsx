@@ -96,7 +96,7 @@ export default function ImpactPage() {
 
                 <div style={{ borderLeft: '3px solid var(--accent-primary)', paddingLeft: '1.25rem', margin: '1rem 0' }}>
                   <p style={{ color: '#f8fafc', fontStyle: 'italic', fontSize: '1.05rem', lineHeight: '1.6' }}>
-                    "{story.quote}"
+                    &ldquo;{story.quote}&rdquo;
                   </p>
                   <div style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginTop: '0.5rem' }}>
                     — {story.founderName}, Founder of {story.businessName}

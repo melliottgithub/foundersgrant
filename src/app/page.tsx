@@ -111,7 +111,7 @@ export default function HomePage() {
         <div className="container">
           <div className="section-header">
             <span className="section-eyebrow">Transparency Invariant</span>
-            <h2 className="section-title">"What’s The Catch? Why Is This Free?"</h2>
+            <h2 className="section-title">&ldquo;What’s The Catch? Why Is This Free?&rdquo;</h2>
             <p className="section-desc">
               We don’t believe in fake internet altruism. Here is the honest commercial reason why we do this.
             </p>
@@ -223,7 +223,7 @@ export default function HomePage() {
                   </div>
 
                   <p style={{ fontStyle: 'italic', color: '#cbd5e1', fontSize: '0.9rem', lineHeight: '1.5', marginBottom: '1.25rem' }}>
-                    "{story.quote}"
+                    &ldquo;{story.quote}&rdquo;
                   </p>
                 </div>
 
