@@ -60,24 +60,24 @@ function ApplicationFormContent() {
         <div className="form-card" style={{ maxWidth: '650px', margin: '0 auto', textAlign: 'center' }}>
           <div style={{ fontSize: '3.5rem', marginBottom: '1rem' }}>🎉</div>
           <span className="section-eyebrow">Application Received</span>
-          <h2 style={{ fontSize: '2.2rem', color: '#fff', marginBottom: '1rem' }}>
+          <h2 style={{ fontSize: '2.2rem', color: 'var(--apple-text-primary)', marginBottom: '1rem', fontWeight: '700' }}>
             You’re In The Review Queue!
           </h2>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem', lineHeight: '1.6', marginBottom: '2rem' }}>
-            Thank you, <strong style={{ color: '#fff' }}>{formData.fullName}</strong>. Your story for{' '}
-            <strong style={{ color: '#fff' }}>{formData.businessName}</strong> has been prioritized for the current review cycle.
+          <p style={{ color: 'var(--apple-text-secondary)', fontSize: '1.05rem', lineHeight: '1.6', marginBottom: '2rem' }}>
+            Thank you, <strong style={{ color: 'var(--apple-text-primary)' }}>{formData.fullName}</strong>. Your story for{' '}
+            <strong style={{ color: 'var(--apple-text-primary)' }}>{formData.businessName}</strong> has been prioritized for the current review cycle.
           </p>
 
-          <div style={{ background: 'rgba(16, 185, 129, 0.08)', border: '1px solid rgba(16, 185, 129, 0.25)', padding: '1.5rem', borderRadius: '12px', textAlign: 'left', marginBottom: '2rem' }}>
-            <h4 style={{ color: '#6ee7b7', marginBottom: '0.5rem', fontSize: '1rem' }}>What Happens Next?</h4>
-            <ul style={{ color: '#cbd5e1', fontSize: '0.9rem', lineHeight: '1.6', paddingLeft: '1.25rem' }}>
-              <li>Our engineering team evaluates submissions every Friday for readiness and community alignment.</li>
+          <div style={{ background: 'rgba(52, 199, 89, 0.08)', border: '1px solid rgba(52, 199, 89, 0.25)', padding: '1.5rem', borderRadius: '12px', textAlign: 'left', marginBottom: '2rem' }}>
+            <h4 style={{ color: '#1b8738', marginBottom: '0.5rem', fontSize: '1rem', fontWeight: '700' }}>What Happens Next?</h4>
+            <ul style={{ color: 'var(--apple-text-secondary)', fontSize: '0.9rem', lineHeight: '1.6', paddingLeft: '1.25rem' }}>
+              <li>Senior Software Architect Michael Elliott evaluates submissions every Friday for readiness and community alignment.</li>
               <li>If selected, you’ll receive an invitation to our 10-day sprint scheduling call.</li>
               <li>Upon kickoff, we deploy your full software stack at $0 in-kind cost.</li>
             </ul>
           </div>
 
-          <Link href="/" className="btn btn-emerald" style={{ padding: '0.85rem 2rem' }}>
+          <Link href="/" className="btn btn-secondary" style={{ padding: '0.85rem 2rem' }}>
             Return to Homepage
           </Link>
         </div>
@@ -89,13 +89,13 @@ function ApplicationFormContent() {
     <div className="container" style={{ padding: '4rem 1.5rem 6rem 1.5rem' }}>
       <div style={{ maxWidth: '780px', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <span className="section-eyebrow">2026 Cohort Application</span>
+          <span className="section-eyebrow">2026 Cohort Application · Pro Bono Sprint</span>
           <h1 className="hero-title" style={{ fontSize: '2.6rem', marginBottom: '0.75rem' }}>
             Apply for Your In-Kind Technology Grant
           </h1>
-          <p style={{ color: 'var(--text-secondary)', fontSize: '1.05rem' }}>
+          <p style={{ color: 'var(--apple-text-secondary)', fontSize: '1.05rem', maxWidth: '640px', margin: '0 auto' }}>
             Tell us about your venture and the single biggest software bottleneck holding you back.
-            Selected projects receive full design, code, and deployment at $0 cost.
+            Selected projects receive full design, code, and deployment at $0 cost—engineered directly by Senior Software Architect Michael Elliott.
           </p>
         </div>
 
@@ -242,7 +242,7 @@ function ApplicationFormContent() {
             />
           </div>
 
-          <div style={{ margin: '2rem 0', display: 'flex', flexDirection: 'column', gap: '1rem', borderTop: '1px solid var(--border-subtle)', paddingTop: '1.5rem' }}>
+          <div style={{ margin: '2rem 0', display: 'flex', flexDirection: 'column', gap: '1rem', borderTop: '1px solid var(--apple-border)', paddingTop: '1.5rem' }}>
             <label className="form-checkbox-label">
               <input
                 type="checkbox"

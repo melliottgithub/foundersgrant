@@ -88,7 +88,7 @@ export default function RootLayout({
         founder: {
           '@type': 'Person',
           name: 'Michael Elliott',
-          jobTitle: 'Lead Software Architect',
+          jobTitle: 'Senior Software Architect & AI/ML Engineer',
           worksFor: {
             '@type': 'Organization',
             name: 'DevMellio LLC',

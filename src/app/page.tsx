@@ -340,26 +340,50 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Attributed Engineer Byline Blockquote (EEAT Trust Signal) */}
+            {/* Attributed Engineer Byline & Engineering Guarantee (EEAT Trust Signal) */}
             <div
               style={{
-                padding: '2rem',
-                background: 'rgba(0, 113, 227, 0.04)',
-                borderLeft: '4px solid var(--apple-blue)',
-                borderRadius: '0 16px 16px 0',
+                padding: '2.5rem',
+                background: '#ffffff',
+                border: '1px solid var(--apple-border)',
+                borderRadius: '20px',
+                boxShadow: 'var(--apple-shadow-subtle)',
                 marginBottom: '1rem',
               }}
             >
-              <p style={{ fontStyle: 'italic', fontSize: '1.05rem', lineHeight: '1.65', color: 'var(--apple-text-primary)', marginBottom: '1rem' }}>
-                &ldquo;We volunteer our software engineering time for free because independent craftspeople and small business owners shouldn&apos;t be priced out of enterprise-quality technology. When a hardworking plumber or bakery gets high-speed automation on their own domain, their revenue stabilizes and local communities thrive.&rdquo;
-              </p>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
-                <div style={{ width: '42px', height: '42px', borderRadius: '50%', background: 'linear-gradient(135deg, var(--apple-blue), #5856d6)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '700', fontSize: '0.95rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.25rem' }}>
+                <div style={{ width: '56px', height: '56px', borderRadius: '50%', background: 'linear-gradient(135deg, var(--apple-blue), #5856d6)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '800', fontSize: '1.2rem', boxShadow: '0 4px 12px rgba(0, 113, 227, 0.25)' }}>
                   ME
                 </div>
                 <div>
-                  <div style={{ fontWeight: '700', fontSize: '0.95rem', color: 'var(--apple-text-primary)' }}>Michael Elliott</div>
-                  <div style={{ fontSize: '0.82rem', color: 'var(--apple-text-muted)' }}>Lead Software Architect · DevMellio LLC (Denver, CO)</div>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
+                    <h3 style={{ fontWeight: '800', fontSize: '1.25rem', color: 'var(--apple-text-primary)', margin: 0 }}>Michael Elliott</h3>
+                    <span style={{ fontSize: '0.75rem', fontWeight: '700', background: 'rgba(52, 199, 89, 0.1)', color: '#1b8738', padding: '0.2rem 0.6rem', borderRadius: 'var(--radius-pill)' }}>
+                      Senior Architecture · Zero Outsourcing
+                    </span>
+                  </div>
+                  <div style={{ fontSize: '0.88rem', color: 'var(--apple-text-secondary)', marginTop: '0.2rem' }}>
+                    Senior Software Architect &amp; AI / Machine Learning Engineer · Founder, DevMellio LLC (Denver, CO)
+                  </div>
+                </div>
+              </div>
+
+              <p style={{ fontStyle: 'italic', fontSize: '1.08rem', lineHeight: '1.7', color: 'var(--apple-text-primary)', marginBottom: '1.5rem' }}>
+                &ldquo;We volunteer our senior software engineering time for free because independent craftspeople and small business owners shouldn&apos;t be priced out of enterprise-quality technology. When a hardworking plumber or bakery gets high-speed automation on their own domain, their revenue stabilizes and local communities thrive.&rdquo;
+              </p>
+
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '1.25rem', paddingTop: '1.25rem', borderTop: '1px solid var(--apple-border)' }}>
+                <div>
+                  <div style={{ fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', color: 'var(--apple-blue)', letterSpacing: '0.04em' }}>Engineering Guarantee</div>
+                  <div style={{ fontSize: '0.88rem', color: 'var(--apple-text-secondary)', marginTop: '0.25rem', lineHeight: '1.5' }}>Every line of code architected directly by senior engineering talent—never passed to junior interns or offshore agencies.</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', color: 'var(--apple-blue)', letterSpacing: '0.04em' }}>10-Day Focused Sprint</div>
+                  <div style={{ fontSize: '0.88rem', color: 'var(--apple-text-secondary)', marginTop: '0.25rem', lineHeight: '1.5' }}>Rapid execution from technical onboarding to live production deployment on your custom domain in 10 days flat.</div>
+                </div>
+                <div>
+                  <div style={{ fontSize: '0.8rem', fontWeight: '700', textTransform: 'uppercase', color: 'var(--apple-blue)', letterSpacing: '0.04em' }}>The Fair Exchange</div>
+                  <div style={{ fontSize: '0.88rem', color: 'var(--apple-text-secondary)', marginTop: '0.25rem', lineHeight: '1.5' }}>$0 software fee. In return, selected founders record a short 2-minute video review and allow us to feature verified case results.</div>
                 </div>
               </div>
             </div>
