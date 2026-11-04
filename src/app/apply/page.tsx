@@ -100,7 +100,7 @@ function ApplicationFormContent() {
         </div>
 
         <form onSubmit={handleSubmit} className="form-card" id="grant-application-form">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+          <div className="form-row-2">
             <div className="form-group">
               <label className="form-label" htmlFor="fullName">Founder Full Name *</label>
               <input
@@ -128,7 +128,7 @@ function ApplicationFormContent() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+          <div className="form-row-2">
             <div className="form-group">
               <label className="form-label" htmlFor="email">Email Address *</label>
               <input
@@ -156,7 +156,7 @@ function ApplicationFormContent() {
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '1.5rem' }}>
+          <div className="form-row-city-state">
             <div className="form-group">
               <label className="form-label" htmlFor="city">City / Metro *</label>
               <input

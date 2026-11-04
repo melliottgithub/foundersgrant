@@ -9,8 +9,8 @@ export default function InteractiveBento() {
 
   return (
     <div style={{ marginTop: '2.5rem' }}>
-      {/* Interactive Bottleneck Selector Tabs */}
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+      {/* Interactive Bottleneck Selector Tabs (Touch Swipe Friendly on Mobile) */}
+      <div className="bento-tabs-scroll">
         <button
           onClick={() => setActiveTab('web')}
           className={`tab-btn ${activeTab === 'web' ? 'active' : ''}`}

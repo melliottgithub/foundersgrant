@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { STATES, CITIES_MATRIX } from '@/data/geo';
 import { IMPACT_STORIES } from '@/data/stories';
 import InteractiveBento from '@/components/InteractiveBento';
+import FaqSection from '@/components/FaqSection';
 
 export default function HomePage() {
   return (
@@ -203,6 +204,9 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* 2027 SEO / GEO Frequently Asked Questions */}
+      <FaqSection />
 
       {/* Final Call to Action */}
       <section style={{ padding: '6rem 0', textAlign: 'center' }}>
