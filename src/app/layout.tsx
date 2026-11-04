@@ -50,7 +50,7 @@ export default function RootLayout({
         <header className="site-nav">
           <div className="container nav-inner">
             <Link href="/" className="brand-logo" id="nav-brand-logo">
-              <span>FoundersGrant<span style={{ color: 'var(--accent-emerald)' }}>.org</span></span>
+              <span>FoundersGrant<span style={{ color: 'var(--apple-blue)' }}>.org</span></span>
               <span className="brand-badge">2026 In-Kind Grant</span>
             </Link>
 
@@ -82,20 +82,20 @@ export default function RootLayout({
             <div className="footer-inner">
               <div>
                 <div className="footer-brand-title">
-                  FoundersGrant<span style={{ color: 'var(--accent-emerald)' }}>.org</span>
+                  FoundersGrant<span style={{ color: 'var(--apple-blue)' }}>.org</span>
                 </div>
-                <p style={{ maxWidth: '420px', lineHeight: '1.6', marginBottom: '1.25rem' }}>
+                <p style={{ maxWidth: '420px', lineHeight: '1.6', marginBottom: '1.25rem', color: 'var(--apple-text-secondary)' }}>
                   An independent technology initiative providing pro bono digital infrastructure,
                   custom full-stack engineering, and AI automation suites to bootstrapped entrepreneurs,
                   community creators, and small business owners nationwide.
                 </p>
-                <div style={{ fontSize: '0.85rem', color: '#94a3b8' }}>
-                  Managed & Engineered by DevMellio LLC · Denver, CO
+                <div style={{ fontSize: '0.85rem', color: 'var(--apple-text-muted)' }}>
+                  Managed &amp; Engineered by DevMellio LLC · Denver, CO
                 </div>
               </div>
 
               <div>
-                <div style={{ color: '#fff', fontWeight: '700', marginBottom: '1rem', fontSize: '0.95rem' }}>
+                <div style={{ color: 'var(--apple-text-primary)', fontWeight: '600', marginBottom: '1rem', fontSize: '0.95rem' }}>
                   Program Initiatives
                 </div>
                 <ul className="footer-links-list">
@@ -107,8 +107,8 @@ export default function RootLayout({
               </div>
 
               <div>
-                <div style={{ color: '#fff', fontWeight: '700', marginBottom: '1rem', fontSize: '0.95rem' }}>
-                  Integrity & Legal
+                <div style={{ color: 'var(--apple-text-primary)', fontWeight: '600', marginBottom: '1rem', fontSize: '0.95rem' }}>
+                  Integrity &amp; Legal
                 </div>
                 <ul className="footer-links-list">
                   <li><Link href="/legal/terms" className="footer-link">In-Kind Grant Terms</Link></li>

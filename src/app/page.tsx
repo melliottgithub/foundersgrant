@@ -11,7 +11,7 @@ export default function HomePage() {
         <div className="container">
           <div className="pill-announcement" id="hero-announcement-pill">
             <span className="pill-dot"></span>
-            <span>🟢 Q4 2026 / Q1 2027 Cohort Live · 8 of 10 Grants Remaining</span>
+            <span>Q4 2026 / Q1 2027 Cohort Live · 8 of 10 In-Kind Grants Open</span>
           </div>
 
           <h1 className="hero-title">
@@ -26,15 +26,15 @@ export default function HomePage() {
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-            <Link href="/apply" className="btn btn-emerald" style={{ padding: '0.9rem 2.2rem', fontSize: '1.05rem' }}>
+            <Link href="/apply" className="btn btn-emerald" style={{ padding: '0.85rem 2.2rem', fontSize: '1.05rem' }}>
               Apply for Active Cohort →
             </Link>
-            <Link href="/impact" className="btn btn-secondary" style={{ padding: '0.9rem 1.8rem', fontSize: '1.05rem' }}>
+            <Link href="/impact" className="btn btn-secondary" style={{ padding: '0.85rem 1.8rem', fontSize: '1.05rem' }}>
               View Verified Case Studies
             </Link>
           </div>
 
-          {/* Interactive Bento Showcase (SOTA 2026) */}
+          {/* Interactive Bento Showcase (Apple SOTA Style) */}
           <InteractiveBento />
 
           {/* Metric Bar */}
@@ -60,7 +60,7 @@ export default function HomePage() {
       </section>
 
       {/* The Transparent Hormozi Value Exchange */}
-      <section style={{ padding: '5rem 0', background: 'rgba(8, 11, 17, 0.7)', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
+      <section style={{ padding: '5rem 0', background: 'var(--apple-surface)', borderTop: '1px solid var(--apple-border)', borderBottom: '1px solid var(--apple-border)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-eyebrow">Zero Fluff Transparency</span>
@@ -73,8 +73,8 @@ export default function HomePage() {
           <div className="grid-3" style={{ marginTop: '2.5rem' }}>
             <div className="bento-mini-card">
               <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>🤝</div>
-              <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.5rem' }}>1. The Value Exchange</h3>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem' }}>
+              <h3 style={{ fontSize: '1.25rem', color: 'var(--apple-text-primary)', marginBottom: '0.5rem', fontWeight: '700' }}>1. The Value Exchange</h3>
+              <p style={{ color: 'var(--apple-text-secondary)', fontSize: '0.95rem' }}>
                 You get thousands of dollars in enterprise Next.js and automation engineering for $0. In exchange, all we ask is: 
                 <strong> (1) a 2-minute video review</strong> once live, and <strong>(2) permission to feature your growth metrics</strong> in our public case study.
               </p>
@@ -82,16 +82,16 @@ export default function HomePage() {
 
             <div className="bento-mini-card">
               <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>🚫</div>
-              <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.5rem' }}>2. Zero Hidden Upsells</h3>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem' }}>
+              <h3 style={{ fontSize: '1.25rem', color: 'var(--apple-text-primary)', marginBottom: '0.5rem', fontWeight: '700' }}>2. Zero Hidden Upsells</h3>
+              <p style={{ color: 'var(--apple-text-secondary)', fontSize: '0.95rem' }}>
                 We never hold your domain hostage, lock you into recurring hosting markups, or bill sneaky maintenance fees. You get 100% ownership of your code, repository, and assets from day one.
               </p>
             </div>
 
             <div className="bento-mini-card">
               <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>🚀</div>
-              <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.5rem' }}>3. Proof Over Paid Ads</h3>
-              <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem' }}>
+              <h3 style={{ fontSize: '1.25rem', color: 'var(--apple-text-primary)', marginBottom: '0.5rem', fontWeight: '700' }}>3. Proof Over Paid Ads</h3>
+              <p style={{ color: 'var(--apple-text-secondary)', fontSize: '0.95rem' }}>
                 Traditional agencies blow tens of thousands on paid ads. We redirect that budget into building real software for real founders. Our marketing is your verified success.
               </p>
             </div>
@@ -121,16 +121,16 @@ export default function HomePage() {
                 <div>
                   <div className="city-name">{city.name}</div>
                   <div className="city-state">{city.state} · Metro Pop: {city.metroPopulation}</div>
-                  <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '1rem', lineHeight: '1.5' }}>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--apple-text-secondary)', marginBottom: '1.25rem', lineHeight: '1.5' }}>
                     {city.focusTitle}
                   </p>
                 </div>
-                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.75rem' }}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderTop: '1px solid var(--apple-border)', paddingTop: '0.85rem' }}>
                   <span className="city-cycle-badge">
                     <span className="pill-dot" style={{ width: '6px', height: '6px' }}></span>
                     {city.activeCycle}
                   </span>
-                  <span style={{ fontSize: '0.85rem', color: 'var(--accent-emerald)', fontWeight: '600' }}>
+                  <span style={{ fontSize: '0.88rem', color: 'var(--apple-blue)', fontWeight: '600' }}>
                     View Hub →
                   </span>
                 </div>
@@ -141,7 +141,7 @@ export default function HomePage() {
       </section>
 
       {/* Verified Impact Spotlight */}
-      <section style={{ padding: '5rem 0', background: 'rgba(8, 11, 17, 0.5)' }}>
+      <section style={{ padding: '5rem 0', background: 'var(--apple-surface)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-eyebrow">Real Transformations</span>
@@ -156,32 +156,32 @@ export default function HomePage() {
               <div key={story.id} className="bento-mini-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
-                    <span style={{ fontSize: '0.8rem', color: 'var(--accent-emerald)', fontWeight: '700' }}>
+                    <span style={{ fontSize: '0.8rem', color: 'var(--apple-blue)', fontWeight: '700' }}>
                       {story.city}, {story.state}
                     </span>
-                    <span style={{ fontSize: '0.75rem', background: 'rgba(255,255,255,0.06)', padding: '0.2rem 0.5rem', borderRadius: '4px', color: '#94a3b8' }}>
+                    <span style={{ fontSize: '0.75rem', background: 'rgba(0,0,0,0.05)', padding: '0.2rem 0.5rem', borderRadius: '4px', color: 'var(--apple-text-secondary)' }}>
                       {story.inKindValue} In-Kind
                     </span>
                   </div>
 
-                  <h3 style={{ fontSize: '1.25rem', color: '#fff', marginBottom: '0.25rem' }}>{story.businessName}</h3>
-                  <div style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>
+                  <h3 style={{ fontSize: '1.25rem', color: 'var(--apple-text-primary)', marginBottom: '0.25rem', fontWeight: '700' }}>{story.businessName}</h3>
+                  <div style={{ fontSize: '0.85rem', color: 'var(--apple-text-muted)', marginBottom: '1rem' }}>
                     Founder: {story.founderName} · {story.category}
                   </div>
 
-                  <div style={{ background: 'rgba(16, 185, 129, 0.08)', border: '1px solid rgba(16, 185, 129, 0.2)', padding: '0.75rem', borderRadius: '8px', marginBottom: '1rem' }}>
-                    <span style={{ fontSize: '0.85rem', color: '#6ee7b7', fontWeight: '600' }}>
+                  <div style={{ background: 'rgba(52, 199, 89, 0.08)', border: '1px solid rgba(52, 199, 89, 0.25)', padding: '0.75rem', borderRadius: '8px', marginBottom: '1rem' }}>
+                    <span style={{ fontSize: '0.88rem', color: '#1b8738', fontWeight: '600' }}>
                       ⚡ {story.impactMetric}
                     </span>
                   </div>
 
-                  <p style={{ fontStyle: 'italic', color: '#cbd5e1', fontSize: '0.9rem', lineHeight: '1.5', marginBottom: '1.25rem' }}>
+                  <p style={{ fontStyle: 'italic', color: 'var(--apple-text-secondary)', fontSize: '0.92rem', lineHeight: '1.55', marginBottom: '1.25rem' }}>
                     &ldquo;{story.quote}&rdquo;
                   </p>
                 </div>
 
-                <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.75rem' }}>
-                  Awarded: <strong style={{ color: '#e2e8f0' }}>{story.awardedPackage}</strong>
+                <div style={{ fontSize: '0.82rem', color: 'var(--apple-text-muted)', borderTop: '1px solid var(--apple-border)', paddingTop: '0.75rem' }}>
+                  Awarded: <strong style={{ color: 'var(--apple-text-primary)' }}>{story.awardedPackage}</strong>
                 </div>
               </div>
             ))}
@@ -198,11 +198,11 @@ export default function HomePage() {
       {/* Final Call to Action */}
       <section style={{ padding: '6rem 0', textAlign: 'center' }}>
         <div className="container">
-          <div className="bento-hero-card" style={{ maxWidth: '850px', margin: '0 auto', padding: '4rem 2rem', background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(16, 185, 129, 0.08))', border: '1px solid rgba(16, 185, 129, 0.3)' }}>
-            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.4rem', fontWeight: '800', color: '#fff', marginBottom: '1rem' }}>
+          <div className="bento-hero-card" style={{ maxWidth: '850px', margin: '0 auto', padding: '4rem 2rem', background: 'linear-gradient(180deg, #ffffff 0%, #f5f5f7 100%)', border: '1px solid var(--apple-border)', boxShadow: 'var(--apple-shadow-hover)' }}>
+            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.4rem', fontWeight: '700', color: 'var(--apple-text-primary)', marginBottom: '1rem', letterSpacing: '-0.03em' }}>
               Have A Mission But Lack The Software?
             </h2>
-            <p style={{ color: 'var(--text-secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
+            <p style={{ color: 'var(--apple-text-secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto 2.5rem auto' }}>
               Applications for the Q4 2026 / Q1 2027 cohort are reviewed on a rolling basis. 
               Submitting takes less than 4 minutes.
             </p>
