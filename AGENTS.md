@@ -1,9 +1,21 @@
-<!-- BEGIN:nextjs-agent-rules -->
+# FoundersGrant.org — AGENTS.md
 
-## This is NOT the Next.js you know
+## Repository Guidelines & Operational Invariants
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+### 1. The Value Equation & Grant Framing Invariant
+- NEVER refer to the offerings as "free labor", "pro bono handouts", or "volunteering".
+- ALWAYS use **"In-Kind Technology Infrastructure Grant"** with clear market valuations ($3,500 – $8,500).
+- The mutual exchange must remain visible: high-leverage software delivered at $0 in exchange for a 2-minute video review and permission to feature metrics in a public case study.
 
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+### 2. Legal Protections Invariant
+- All client agreements, submission forms, and documentation MUST point to `/legal/terms`.
+- Maintain the $0 liability limitation and "AS-IS" software disclaimers at all times.
+- Ensure the recipient is granted 100% full IP code ownership and repository access upon project handover.
 
-<!-- END:nextjs-agent-rules -->
+### 3. Programmatic Hub Expansion
+- When adding new city or international hubs, append them directly to `src/data/cities.ts`.
+- Ensure each city entry has a unique slug, metro population, regional focus title, priority needs, and active cycle deadline.
+- `generateStaticParams()` will automatically compile new static routes on build.
+
+### 4. Zero-Assumption & Verification Invariant
+- Always run `npm run build` to verify clean compilation across all static routes before declaring completion.
