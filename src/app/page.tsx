@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { GRANT_PACKAGES } from '@/data/packages';
 import { CITIES } from '@/data/cities';
 import { IMPACT_STORIES } from '@/data/stories';
+import InteractiveBento from '@/components/InteractiveBento';
 
 export default function HomePage() {
   return (
@@ -11,34 +11,37 @@ export default function HomePage() {
         <div className="container">
           <div className="pill-announcement" id="hero-announcement-pill">
             <span className="pill-dot"></span>
-            <span>Q4 2026 / Q1 2027 Cycle Open · Accepting Applications Nationwide</span>
+            <span>🟢 Q4 2026 / Q1 2027 Cohort Live · 8 of 10 Grants Remaining</span>
           </div>
 
           <h1 className="hero-title">
-            We Build Websites & Autonomous AI Engines for Founders.{' '}
-            <span className="hero-gradient-text">At $0 Cost.</span>
+            The $0 Tech Infrastructure Grant. <br />
+            <span className="hero-gradient-text">Engineered for Founders Who Build.</span>
           </h1>
 
           <p className="hero-subtext">
-            <strong>Founders Grant</strong> awards enterprise-grade web development, custom software,
-            local SEO, and AI workflow automations to small business owners and creators who cannot afford
-            expensive agency retainers. You bring your mission; we engineer your digital infrastructure.
+            We award full-stack web applications, local SEO engines, and autonomous AI workflows to 
+            bootstrapped entrepreneurs and small businesses at <strong>$0 cost</strong>. You bring the mission; 
+            we deploy your production software.
           </p>
 
-          <div className="hero-cta-group">
-            <Link href="/apply" className="btn btn-emerald" id="hero-apply-btn" style={{ padding: '0.9rem 2rem', fontSize: '1.05rem' }}>
-              Apply for In-Kind Grant →
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+            <Link href="/apply" className="btn btn-emerald" style={{ padding: '0.9rem 2.2rem', fontSize: '1.05rem' }}>
+              Apply for Active Cohort →
             </Link>
-            <Link href="/impact" className="btn btn-secondary" id="hero-impact-btn" style={{ padding: '0.9rem 1.75rem', fontSize: '1.05rem' }}>
-              See Awarded Case Studies
+            <Link href="/impact" className="btn btn-secondary" style={{ padding: '0.9rem 1.8rem', fontSize: '1.05rem' }}>
+              View Verified Case Studies
             </Link>
           </div>
+
+          {/* Interactive Bento Showcase (SOTA 2026) */}
+          <InteractiveBento />
 
           {/* Metric Bar */}
           <div className="stat-bar" id="hero-metric-bar">
             <div className="stat-item">
               <span className="stat-value highlight-emerald">$52,000+</span>
-              <span className="stat-label">In-Kind Tech Awarded</span>
+              <span className="stat-label">In-Kind Tech Delivered</span>
             </div>
             <div className="stat-item">
               <span className="stat-value">12 Metros</span>
@@ -46,100 +49,50 @@ export default function HomePage() {
             </div>
             <div className="stat-item">
               <span className="stat-value highlight-emerald">100% Free</span>
-              <span className="stat-label">Zero Invoicing or Catch</span>
+              <span className="stat-label">Zero Invoicing or Lock-in</span>
             </div>
             <div className="stat-item">
               <span className="stat-value">7–14 Days</span>
-              <span className="stat-label">Average Sprint Handover</span>
+              <span className="stat-label">Sprint Time to Production</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Grant Packages Section */}
-      <section id="packages" style={{ padding: '5rem 0' }}>
+      {/* The Transparent Hormozi Value Exchange */}
+      <section style={{ padding: '5rem 0', background: 'rgba(8, 11, 17, 0.7)', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-eyebrow">Award Categories</span>
-            <h2 className="section-title">The 4 In-Kind Technology Packages</h2>
-            <p className="section-desc">
-              Every grant recipient receives a fully deployed, production-ready digital asset. 
-              Choose the package that removes your business’s single biggest bottleneck.
-            </p>
-          </div>
-
-          <div className="grid-2">
-            {GRANT_PACKAGES.map((pkg) => (
-              <div key={pkg.id} className="glass-card package-card" id={`card-${pkg.id}`}>
-                <div className="package-top">
-                  <span className="package-badge-tag">{pkg.badge}</span>
-                  <h3 className="package-name">{pkg.name}</h3>
-                  <div className="package-val">{pkg.marketValue}</div>
-                  <p className="package-summary">{pkg.summary}</p>
-                  
-                  <ul className="package-feature-list">
-                    {pkg.features.map((feature, idx) => (
-                      <li key={idx} className="package-feature-item">
-                        <span className="package-feature-icon">✓</span>
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div style={{ borderTop: '1px solid var(--border-subtle)', paddingTop: '1.25rem' }}>
-                  <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: '1rem' }}>
-                    <strong style={{ color: '#e2e8f0' }}>Ideal Candidate:</strong> {pkg.idealFor}
-                  </div>
-                  <Link 
-                    href={`/apply?package=${encodeURIComponent(pkg.name)}`} 
-                    className="btn btn-secondary" 
-                    style={{ width: '100%' }}
-                    id={`apply-${pkg.id}`}
-                  >
-                    Apply for This Grant →
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* The "Reason Why" Section (Hormozi Trust Architecture) */}
-      <section style={{ padding: '5rem 0', background: 'rgba(13, 18, 29, 0.5)', borderTop: '1px solid var(--border-subtle)', borderBottom: '1px solid var(--border-subtle)' }}>
-        <div className="container">
-          <div className="section-header">
-            <span className="section-eyebrow">Transparency Invariant</span>
+            <span className="section-eyebrow">Zero Fluff Transparency</span>
             <h2 className="section-title">&ldquo;What’s The Catch? Why Is This Free?&rdquo;</h2>
             <p className="section-desc">
-              We don’t believe in fake internet altruism. Here is the honest commercial reason why we do this.
+              We don’t believe in fake internet altruism. Here is the exact commercial trade.
             </p>
           </div>
 
           <div className="grid-3" style={{ marginTop: '2.5rem' }}>
-            <div className="glass-card">
-              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>🤝</div>
-              <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.75rem' }}>1. The Value Exchange</h3>
+            <div className="bento-mini-card">
+              <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>🤝</div>
+              <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.5rem' }}>1. The Value Exchange</h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem' }}>
-                You get thousands of dollars in enterprise software engineering at zero cost. In exchange, all we ask is: 
-                <strong> (1) a 2-minute video review</strong> once your system is live, and <strong>(2) permission to feature your growth metrics</strong> in our public case study.
+                You get thousands of dollars in enterprise Next.js and automation engineering for $0. In exchange, all we ask is: 
+                <strong> (1) a 2-minute video review</strong> once live, and <strong>(2) permission to feature your growth metrics</strong> in our public case study.
               </p>
             </div>
 
-            <div className="glass-card">
-              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>🚫</div>
-              <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.75rem' }}>2. Zero Hidden Upsells</h3>
+            <div className="bento-mini-card">
+              <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>🚫</div>
+              <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.5rem' }}>2. Zero Hidden Upsells</h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem' }}>
-                We never hold your domain hostage, lock you into monthly hosting markups, or demand maintenance retainers. You receive full ownership of your code, repository, and assets from day one.
+                We never hold your domain hostage, lock you into recurring hosting markups, or bill sneaky maintenance fees. You get 100% ownership of your code, repository, and assets from day one.
               </p>
             </div>
 
-            <div className="glass-card">
-              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>🚀</div>
-              <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.75rem' }}>3. Proof Over Promises</h3>
+            <div className="bento-mini-card">
+              <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>🚀</div>
+              <h3 style={{ fontSize: '1.2rem', color: '#fff', marginBottom: '0.5rem' }}>3. Proof Over Paid Ads</h3>
               <p style={{ color: 'var(--text-secondary)', fontSize: '0.92rem' }}>
-                Traditional marketing agencies spend tens of thousands on paid ads. We redirect that capital directly into building real software for real founders. Our proof is your live success.
+                Traditional agencies blow tens of thousands on paid ads. We redirect that budget into building real software for real founders. Our marketing is your verified success.
               </p>
             </div>
           </div>
@@ -150,10 +103,10 @@ export default function HomePage() {
       <section id="cities" style={{ padding: '5rem 0' }}>
         <div className="container">
           <div className="section-header">
-            <span className="section-eyebrow">Local Impact Hubs</span>
+            <span className="section-eyebrow">Local Chapters</span>
             <h2 className="section-title">Regional Grant Chapters</h2>
             <p className="section-desc">
-              Explore open grant cycles across top metropolitan markets. Local founders are prioritized in each regional review.
+              Explore open grant cycles across top metropolitan markets. Local founders are prioritized in each review.
             </p>
           </div>
 
@@ -177,7 +130,7 @@ export default function HomePage() {
                     <span className="pill-dot" style={{ width: '6px', height: '6px' }}></span>
                     {city.activeCycle}
                   </span>
-                  <span style={{ fontSize: '0.85rem', color: 'var(--accent-primary)', fontWeight: '600' }}>
+                  <span style={{ fontSize: '0.85rem', color: 'var(--accent-emerald)', fontWeight: '600' }}>
                     View Hub →
                   </span>
                 </div>
@@ -188,7 +141,7 @@ export default function HomePage() {
       </section>
 
       {/* Verified Impact Spotlight */}
-      <section style={{ padding: '5rem 0', background: 'rgba(13, 18, 29, 0.4)' }}>
+      <section style={{ padding: '5rem 0', background: 'rgba(8, 11, 17, 0.5)' }}>
         <div className="container">
           <div className="section-header">
             <span className="section-eyebrow">Real Transformations</span>
@@ -200,7 +153,7 @@ export default function HomePage() {
 
           <div className="grid-3">
             {IMPACT_STORIES.map((story) => (
-              <div key={story.id} className="glass-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div key={story.id} className="bento-mini-card" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <div>
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
                     <span style={{ fontSize: '0.8rem', color: 'var(--accent-emerald)', fontWeight: '700' }}>
@@ -245,7 +198,7 @@ export default function HomePage() {
       {/* Final Call to Action */}
       <section style={{ padding: '6rem 0', textAlign: 'center' }}>
         <div className="container">
-          <div className="glass-card" style={{ maxWidth: '850px', margin: '0 auto', padding: '4rem 2rem', background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(16, 185, 129, 0.08))', border: '1px solid rgba(99, 102, 241, 0.3)' }}>
+          <div className="bento-hero-card" style={{ maxWidth: '850px', margin: '0 auto', padding: '4rem 2rem', background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(16, 185, 129, 0.08))', border: '1px solid rgba(16, 185, 129, 0.3)' }}>
             <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2.4rem', fontWeight: '800', color: '#fff', marginBottom: '1rem' }}>
               Have A Mission But Lack The Software?
             </h2>
