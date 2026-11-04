@@ -58,8 +58,8 @@ export default function RootLayout({
               <Link href="/#packages" className="nav-link" id="nav-packages">
                 Grant Packages
               </Link>
-              <Link href="/#cities" className="nav-link" id="nav-cities">
-                City Hubs
+              <Link href="/grants" className="nav-link" id="nav-cities">
+                Regional Chapters
               </Link>
               <Link href="/impact" className="nav-link" id="nav-impact">
                 Verified Impact
@@ -101,7 +101,7 @@ export default function RootLayout({
                 <ul className="footer-links-list">
                   <li><Link href="/#packages" className="footer-link">The 4 Grant Packages</Link></li>
                   <li><Link href="/impact" className="footer-link">Founder Case Studies</Link></li>
-                  <li><Link href="/#cities" className="footer-link">National City Directory</Link></li>
+                  <li><Link href="/grants" className="footer-link">State &amp; City Chapters</Link></li>
                   <li><Link href="/apply" className="footer-link">Submit Your Application</Link></li>
                 </ul>
               </div>

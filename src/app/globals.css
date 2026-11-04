@@ -817,6 +817,94 @@ a {
   color: var(--apple-text-muted);
 }
 
+/* Apple Breadcrumb */
+.apple-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--apple-text-muted);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.apple-breadcrumb a {
+  color: var(--apple-text-secondary);
+  transition: color 0.15s ease;
+  text-decoration: none;
+}
+
+.apple-breadcrumb a:hover {
+  color: var(--apple-blue);
+}
+
+.apple-breadcrumb-separator {
+  color: #c7c7cc;
+  font-size: 0.75rem;
+  user-select: none;
+}
+
+.apple-breadcrumb-current {
+  color: var(--apple-text-primary);
+  font-weight: 500;
+}
+
+/* State & Geo Directory Cards */
+.state-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.75rem;
+  background: #ffffff;
+  border: 1px solid var(--apple-border);
+  border-radius: var(--radius-squircle-md);
+  box-shadow: var(--apple-shadow-card);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.state-card:hover {
+  border-color: rgba(0, 113, 227, 0.35);
+  box-shadow: var(--apple-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.state-card-name {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--apple-text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.state-card-region {
+  color: var(--apple-text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.85rem;
+}
+
+.state-card-cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.city-pill-sm {
+  background: var(--apple-surface);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: var(--radius-pill);
+  padding: 0.25rem 0.65rem;
+  font-size: 0.78rem;
+  color: var(--apple-text-secondary);
+  transition: all 0.15s ease;
+}
+
+.city-pill-sm:hover {
+  background: #ebebee;
+  color: var(--apple-blue);
+}
+
 @media (max-width: 900px) {
   .bento-split {
     grid-template-columns: 1fr;

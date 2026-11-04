@@ -4,15 +4,16 @@ import { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { GRANT_PACKAGES } from '@/data/packages';
-import { CITIES } from '@/data/cities';
+import { CITIES_MATRIX } from '@/data/geo';
 
 function ApplicationFormContent() {
   const searchParams = useSearchParams();
   const initialCity = searchParams.get('city') || '';
+  const initialState = searchParams.get('state') || '';
   const initialPackage = searchParams.get('package') || '';
 
   const matchedCity = initialCity
-    ? CITIES.find((c) => c.name.toLowerCase() === initialCity.toLowerCase())
+    ? CITIES_MATRIX.find((c) => c.name.toLowerCase() === initialCity.toLowerCase())
     : null;
 
   const [formData, setFormData] = useState({
@@ -21,7 +22,7 @@ function ApplicationFormContent() {
     email: '',
     phone: '',
     city: matchedCity ? matchedCity.name : initialCity,
-    state: matchedCity ? matchedCity.stateCode : '',
+    state: matchedCity ? matchedCity.stateCode : initialState,
     website: '',
     desiredPackage: initialPackage,
     founderStory: '',

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { CITIES } from '@/data/cities';
+import { STATES, CITIES_MATRIX } from '@/data/geo';
 import { IMPACT_STORIES } from '@/data/stories';
 import InteractiveBento from '@/components/InteractiveBento';
 
@@ -106,21 +106,24 @@ export default function HomePage() {
             <span className="section-eyebrow">Local Chapters</span>
             <h2 className="section-title">Regional Grant Chapters</h2>
             <p className="section-desc">
-              Explore open grant cycles across top metropolitan markets. Local founders are prioritized in each review.
+              Explore open grant cycles across Colorado and top US metropolitan markets. Local founders are prioritized in each review.
             </p>
           </div>
 
           <div className="grid-3">
-            {CITIES.map((city) => (
+            {CITIES_MATRIX.slice(0, 9).map((city) => (
               <Link 
-                key={city.slug} 
-                href={`/grants/${city.slug}`}
+                key={`${city.stateSlug}-${city.slug}`} 
+                href={`/grants/${city.stateSlug}/${city.slug}`}
                 className="city-card"
                 id={`city-link-${city.slug}`}
               >
                 <div>
-                  <div className="city-name">{city.name}</div>
-                  <div className="city-state">{city.state} · Metro Pop: {city.metroPopulation}</div>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.25rem' }}>
+                    <div className="city-name">{city.name}</div>
+                    <span className="mini-badge">{city.stateCode}</span>
+                  </div>
+                  <div className="city-state">{city.stateName} · Metro Pop: {city.metroPopulation}</div>
                   <p style={{ fontSize: '0.9rem', color: 'var(--apple-text-secondary)', marginBottom: '1.25rem', lineHeight: '1.5' }}>
                     {city.focusTitle}
                   </p>
@@ -136,6 +139,12 @@ export default function HomePage() {
                 </div>
               </Link>
             ))}
+          </div>
+
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <Link href="/grants" className="btn btn-secondary" style={{ padding: '0.85rem 2rem', fontSize: '1rem' }}>
+              View All {STATES.length} States &amp; {CITIES_MATRIX.length} Regional Hubs →
+            </Link>
           </div>
         </div>
       </section>
