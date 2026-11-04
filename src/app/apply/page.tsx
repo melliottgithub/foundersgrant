@@ -265,7 +265,7 @@ function ApplicationFormContent() {
                 onChange={(e) => setFormData({ ...formData, termsAgreement: e.target.checked })}
               />
               <span>
-                I agree to the <Link href="/legal/terms" target="_blank" style={{ color: 'var(--accent-primary)', textDecoration: 'underline' }}>In-Kind Grant Terms & Limitation of Liability</Link> ($0 liability cap, provided AS-IS with 100% full IP code ownership granted to me).
+                I agree to the <Link href="/legal/terms" target="_blank" style={{ color: 'var(--apple-blue)', textDecoration: 'underline' }}>In-Kind Grant Terms &amp; Limitation of Liability</Link> ($0 liability cap, provided AS-IS with 100% founder data sovereignty and DevMellio IP protections).
               </span>
             </label>
           </div>

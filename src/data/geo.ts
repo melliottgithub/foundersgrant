@@ -354,7 +354,7 @@ export const CITIES_MATRIX: CityData[] = [
     metroPopulation: '4.6 Million',
     focusTitle: 'Bay Area Non-Profits, Civic Innovators & Micro-Founders',
     description: 'Providing non-profit founders and grassroots Bay Area community leaders with enterprise-level open source web architecture.',
-    priorityNeeds: ['Open Source Code Handover', 'Sub-Second Lighthouse Scores', 'Volunteer Intake Portals'],
+    priorityNeeds: ['Founder Data Sovereignty', 'Sub-Second Lighthouse Scores', 'Volunteer Intake Portals'],
     keyIndustries: ['Civic Technology', 'Community Non-Profits', 'Artisan Coffee & Food'],
     awardedGrantsCount: 2,
     activeCycle: 'Q4 2026 / Q1 2027 Cycle',

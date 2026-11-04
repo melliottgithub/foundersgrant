@@ -70,7 +70,7 @@ export default function InteractiveBento() {
                 </div>
                 <div className="metric-chip">
                   <span className="metric-chip-val">100%</span>
-                  <span className="metric-chip-lbl">Code Handover</span>
+                  <span className="metric-chip-lbl">Data Sovereignty</span>
                 </div>
               </div>
               <div style={{ marginTop: '2rem' }}>
@@ -253,18 +253,18 @@ export default function InteractiveBento() {
               </div>
             </div>
 
-            {/* Code & Terminal Handover Artifact */}
+            {/* Live Production Deployment Artifact */}
             <div className="preview-box">
               <div className="window-header">
                 <span className="window-title">bash — production-deploy.sh</span>
               </div>
               <div className="code-block">
-                <p><span style={{ color: '#6366f1' }}>$</span> git clone git@github.com:foundersgrant/your-app.git</p>
+                <p><span style={{ color: '#6366f1' }}>$</span> deploy --target production --domain yourventure.com</p>
                 <p><span style={{ color: '#10b981' }}>✓</span> Next.js 16 App Router Compiled</p>
-                <p><span style={{ color: '#10b981' }}>✓</span> PostgreSQL Schema Migrated</p>
+                <p><span style={{ color: '#10b981' }}>✓</span> Production Database Deployed</p>
                 <p><span style={{ color: '#10b981' }}>✓</span> SSL &amp; Cloudflare Edge CDN Active</p>
                 <p style={{ color: '#a5b4fc', marginTop: '0.5rem' }}>
-                  {`// 100% Full IP Transfer: You own the keys, code, and database forever.`}
+                  {`// 100% Data Sovereignty: You own your customers, leads, and domain forever.`}
                 </p>
               </div>
             </div>

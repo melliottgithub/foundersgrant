@@ -22,7 +22,7 @@ export const GRANT_PACKAGES: GrantPackage[] = [
       'Sub-second page load times (100/100 Google Lighthouse score)',
       'Fully responsive mobile safe-zone design (1080p and touch optimized)',
       'Built-in lead capture & instant email/SMS dispatch',
-      'Full source code ownership & lifetime GitHub repository deployment'
+      '100% founder data sovereignty & production deployment on Cloudflare Edge'
     ],
     idealFor: 'New business owners without a website or trapped with a broken, slow legacy template.'
   },

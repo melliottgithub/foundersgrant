@@ -85,7 +85,7 @@ export default function HomePage() {
               <div style={{ fontSize: '2rem', marginBottom: '0.75rem' }}>🚫</div>
               <h3 style={{ fontSize: '1.25rem', color: 'var(--apple-text-primary)', marginBottom: '0.5rem', fontWeight: '700' }}>2. Zero Hidden Upsells</h3>
               <p style={{ color: 'var(--apple-text-secondary)', fontSize: '0.95rem' }}>
-                We never hold your domain hostage, lock you into recurring hosting markups, or bill sneaky maintenance fees. You get 100% ownership of your code, repository, and assets from day one.
+                We never hold your domain hostage, lock you into recurring hosting markups, or bill sneaky maintenance fees. Your customer data, leads, domain, and brand assets are 100% yours forever, powered by our enterprise software stack at $0.
               </p>
             </div>
 

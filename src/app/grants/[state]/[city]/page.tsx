@@ -227,7 +227,7 @@ export default async function CityGrantPage({ params }: Props) {
             <span className="section-eyebrow">In-Kind Allocations</span>
             <h2 className="section-title">Select Your Desired Grant Package</h2>
             <p className="section-desc">
-              All packages are 100% pro bono with complete IP and code ownership assigned to you.
+              All packages are 100% pro bono with complete founder data sovereignty and zero software licensing fees.
             </p>
           </div>
 

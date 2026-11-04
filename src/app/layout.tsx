@@ -183,7 +183,7 @@ export default function RootLayout({
                 <ul className="footer-links-list">
                   <li><Link href="/legal/terms" className="footer-link">In-Kind Grant Terms</Link></li>
                   <li><Link href="/legal/terms#liability" className="footer-link">$0 Liability Disclaimer</Link></li>
-                  <li><Link href="/legal/terms#ip" className="footer-link">Full IP Ownership Rights</Link></li>
+                  <li><Link href="/legal/terms#ip" className="footer-link">IP &amp; Founder Data Sovereignty</Link></li>
                   <li><Link href="/legal/terms#disclosure" className="footer-link">Non-Profit vs. In-Kind Disclosure</Link></li>
                 </ul>
               </div>

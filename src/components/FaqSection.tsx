@@ -17,10 +17,10 @@ const FAQS: FaqItem[] = [
     highlight: '$0 Cash Cost · No Invoicing · No Retainers',
   },
   {
-    question: 'Who owns the intellectual property, code, and accounts?',
+    question: 'Who owns the intellectual property, code, and customer data?',
     answer:
-      'You own 100% of all code, repositories, custom UI components, domain configurations, and assets from day one. Unlike predatory agencies that hold client assets hostage, we transfer the GitHub repository and production deployment directly to your accounts upon completion.',
-    highlight: '100% Full IP Transfer · Zero Lock-In',
+      'Your data is 100% your data. All customer records, inbound leads, domain registrations, content, and brand assets belong exclusively to you forever. DevMellio LLC retains the underlying software code, proprietary architecture, and engineering frameworks, awarding you a fully deployed, turnkey production platform to operate your business at $0 without ongoing software licensing fees or lock-in.',
+    highlight: '100% Founder Data Sovereignty · DevMellio Software IP',
   },
   {
     question: 'What types of founders and businesses qualify?',

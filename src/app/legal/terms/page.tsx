@@ -111,16 +111,16 @@ export default function TermsPage() {
 
           <section id="ip">
             <h2 style={{ color: 'var(--apple-text-primary)', fontSize: '1.35rem', marginBottom: '0.75rem', fontWeight: '700' }}>
-              4. Intellectual Property &amp; Code Ownership
+              4. Intellectual Property &amp; Founder Data Sovereignty
             </h2>
             <p>
-              <strong style={{ color: 'var(--apple-text-primary)' }}>Your Business Stays Yours:</strong> The grant recipient retains 100% full ownership of their pre-existing trademarks, 
-              customer lists, domain names, and brand assets.
+              <strong style={{ color: 'var(--apple-text-primary)' }}>Their Data Is Their Data (100% Founder Data Sovereignty):</strong> The grant recipient retains 100% exclusive, unencumbered ownership of all customer databases, leads, prospect records, domain names, content, trademarks, and business assets. DevMellio LLC makes zero claim of ownership to recipient customer data or business relationships.
             </p>
             <p style={{ marginTop: '0.5rem' }}>
-              <strong style={{ color: 'var(--apple-text-primary)' }}>Perpetual Code Ownership:</strong> Upon completion of the sprint, DevMellio LLC transfers the custom codebase 
-              directly to the recipient’s repository, granting an irrevocable, perpetual, royalty-free, worldwide license to modify, 
-              scale, and deploy the delivered code without ongoing licensing fees or vendor lock-in.
+              <strong style={{ color: 'var(--apple-text-primary)' }}>DevMellio Code &amp; Software IP:</strong> All underlying source code, platform architectures, engineering frameworks, algorithms, and technical automation workflows engineered by DevMellio LLC remain the exclusive intellectual property of DevMellio LLC. 
+            </p>
+            <p style={{ marginTop: '0.5rem' }}>
+              <strong style={{ color: 'var(--apple-text-primary)' }}>Turnkey Operational License:</strong> In lieu of monetary compensation, DevMellio LLC awards the recipient a fully configured, live production software deployment and an irrevocable, royalty-free operational license to run the software for their venture with zero software licensing fees.
             </p>
           </section>
 

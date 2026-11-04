@@ -202,7 +202,7 @@ export default async function StateGrantPage({ params }: Props) {
             <span className="section-eyebrow">Available Across {state.name}</span>
             <h2 className="section-title">In-Kind Grant Packages Awarded</h2>
             <p className="section-desc">
-              Every package is delivered as a turnkey 7–14 day engineering sprint. 100% intellectual property transfer on day one.
+              Every package is delivered as a turnkey 7–14 day engineering sprint with 100% founder data sovereignty and zero platform fees.
             </p>
           </div>
 

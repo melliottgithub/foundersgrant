@@ -73,7 +73,7 @@ export default function ImpactPage() {
             </div>
             <div className="stat-item">
               <span className="stat-value">100%</span>
-              <span className="stat-label">Full Code Ownership Handed Over</span>
+              <span className="stat-label">Founder Data Sovereignty &amp; Privacy</span>
             </div>
           </div>
         </div>
