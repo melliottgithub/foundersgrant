@@ -33,8 +33,11 @@ function ApplicationFormContent() {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const DIRECT_LAMBDA_URL = 'https://24exfbcyds46du3drw5ydtpsli0rguts.lambda-url.us-east-1.on.aws/';
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.videoAgreement || !formData.termsAgreement) {
       alert('Please agree to the video review commitment and the in-kind terms.');
@@ -42,16 +45,47 @@ function ApplicationFormContent() {
     }
 
     setSubmitting(true);
-    // Simulate instantaneous processing & persistent logging
-    setTimeout(() => {
-      setSubmitting(false);
-      setIsSubmitted(true);
+    setErrorMessage('');
+
+    try {
+      let res: Response | null = null;
+      try {
+        res = await fetch('/api/apply', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+      } catch {
+        res = null;
+      }
+
+      if (!res || !res.ok) {
+        res = await fetch(DIRECT_LAMBDA_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(formData),
+        });
+      }
+
+      if (!res.ok) {
+        throw new Error(`Submission failed with status: ${res.status}`);
+      }
+
       if (typeof window !== 'undefined') {
         const stored = JSON.parse(localStorage.getItem('foundersgrant_applications') || '[]');
         stored.push({ ...formData, submittedAt: new Date().toISOString() });
         localStorage.setItem('foundersgrant_applications', JSON.stringify(stored));
       }
-    }, 800);
+
+      setIsSubmitted(true);
+    } catch (err: unknown) {
+      console.error('Submission error:', err);
+      setErrorMessage(
+        'We encountered a network issue submitting your application. Please try again or email us directly at michael.elliott@devmellio.com.'
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -269,6 +303,23 @@ function ApplicationFormContent() {
               </span>
             </label>
           </div>
+
+          {errorMessage && (
+            <div
+              style={{
+                background: 'rgba(255, 59, 48, 0.08)',
+                border: '1px solid rgba(255, 59, 48, 0.25)',
+                color: '#d70015',
+                padding: '0.85rem 1.25rem',
+                borderRadius: '8px',
+                fontSize: '0.9rem',
+                marginBottom: '1.25rem',
+                lineHeight: '1.5',
+              }}
+            >
+              {errorMessage}
+            </div>
+          )}
 
           <button
             type="submit"

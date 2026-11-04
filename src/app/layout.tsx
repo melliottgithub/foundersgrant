@@ -33,6 +33,16 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://foundersgrant.org',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.webmanifest',
   openGraph: {
     title: 'Founders Grant | In-Kind Technology Infrastructure Grants',
     description:
@@ -41,12 +51,21 @@ export const metadata: Metadata = {
     siteName: 'Founders Grant',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Founders Grant · $0 In-Kind Technology Grants for Founders',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Founders Grant | Tech Grants for Founders',
     description:
       'In-kind engineering and digital infrastructure grants awarded based on founder story and community impact.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -74,15 +93,27 @@ export default function RootLayout({
         '@id': 'https://foundersgrant.org/#organization',
         name: 'Founders Grant',
         url: 'https://foundersgrant.org',
-        logo: 'https://foundersgrant.org/favicon.ico',
+        logo: 'https://foundersgrant.org/apple-touch-icon.png',
+        telephone: '+1-720-530-5571',
+        email: 'michael.elliott@devmellio.com',
         description:
           'Pro bono technology empowerment initiative awarding in-kind Next.js engineering, local SEO architectures, and AI workflow automations to bootstrapped founders and local small businesses.',
+        address: {
+          '@type': 'PostalAddress',
+          streetAddress: '1500 N Grant St',
+          addressLocality: 'Denver',
+          addressRegion: 'CO',
+          postalCode: '80203',
+          addressCountry: 'US',
+        },
         foundingLocation: {
           '@type': 'Place',
           address: {
             '@type': 'PostalAddress',
+            streetAddress: '1500 N Grant St',
             addressLocality: 'Denver',
             addressRegion: 'CO',
+            postalCode: '80203',
             addressCountry: 'US',
           },
         },
@@ -225,6 +256,33 @@ export default function RootLayout({
                   <li><Link href="/legal/terms#liability" className="footer-link">$0 Liability Disclaimer</Link></li>
                   <li><Link href="/legal/terms#ip" className="footer-link">IP &amp; Founder Data Sovereignty</Link></li>
                   <li><Link href="/legal/terms#disclosure" className="footer-link">Non-Profit vs. In-Kind Disclosure</Link></li>
+                </ul>
+              </div>
+
+              <div>
+                <div style={{ color: 'var(--apple-text-primary)', fontWeight: '600', marginBottom: '1rem', fontSize: '0.95rem' }}>
+                  Contact &amp; Operations
+                </div>
+                <ul className="footer-links-list" style={{ fontSize: '0.85rem' }}>
+                  <li>
+                    <span style={{ color: 'var(--apple-text-muted)', display: 'block', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>HQ &amp; Studio</span>
+                    <span style={{ color: 'var(--apple-text-primary)' }}>1500 N Grant St, Denver, CO 80203</span>
+                  </li>
+                  <li>
+                    <span style={{ color: 'var(--apple-text-muted)', display: 'block', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Direct Phone</span>
+                    <a href="tel:7205305571" className="footer-link" style={{ color: 'var(--apple-blue)', fontWeight: '600' }}>(720) 530-5571</a>
+                  </li>
+                  <li>
+                    <span style={{ color: 'var(--apple-text-muted)', display: 'block', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Program Desk</span>
+                    <a href="mailto:apply@foundersgrant.org" className="footer-link">apply@foundersgrant.org</a>
+                  </li>
+                  <li>
+                    <span style={{ color: 'var(--apple-text-muted)', display: 'block', fontSize: '0.72rem', textTransform: 'uppercase', letterSpacing: '0.5px' }}>Senior Architect</span>
+                    <a href="mailto:michael.elliott@devmellio.com" className="footer-link">michael.elliott@devmellio.com</a>
+                  </li>
+                  <li style={{ marginTop: '0.25rem', color: 'var(--apple-text-muted)', fontSize: '0.78rem', lineHeight: '1.4' }}>
+                    Evaluations held weekly every Friday at 17:00 MT.
+                  </li>
                 </ul>
               </div>
             </div>
